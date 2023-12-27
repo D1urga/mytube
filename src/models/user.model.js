@@ -63,8 +63,6 @@ userSchema.methods.isPasswordCorrect = async function (password) {
 };
 
 userSchema.methods.generateAccessToken = function () {
-  var date = new Date();
-  date.setTime(date.getTime() + 60 * 1000);
   return jwt.sign(
     {
       _id: this._id,
@@ -74,20 +72,18 @@ userSchema.methods.generateAccessToken = function () {
     },
     "accesstokensecret",
     {
-      expiresIn: date,
+      expiresIn: "1d",
     }
   );
 };
 userSchema.methods.generateRefreshToken = function () {
-  var date = new Date();
-  date.setTime(date.getTime() + 60 * 1000);
   return jwt.sign(
     {
       _id: this._id,
     },
     "refreshtokensecret",
     {
-      expiresIn: date,
+      expiresIn: "10d",
     }
   );
 };
