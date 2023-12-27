@@ -1,14 +1,25 @@
 import express from "express";
 import cors from "cors";
-import { TestingModel } from "./models/testing.models.js";
+import cookieParser from "cookie-parser";
+import { upload } from "./middlewares/multer.middleware.js";
+import { uploadOnCloudinary } from "./utils/cloudinary.js";
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
+app.use(cookieParser());
 
-app.get("/", async (req, res) => {
-  await res.json({ data: "api is working fine" });
+// routes import
+import userRouter from "./routes/user.routes.js";
+
+// route decleration
+
+app.use("/api/v1/users", userRouter);
+app.get("/sample", (req, res) => {
+  res.json({ data: "working fine" });
 });
 
 export { app };
