@@ -94,7 +94,8 @@ const loginUser = asyncHandler(async (req, res) => {
   );
 
   const options = {
-    sameSite: "lax",
+    httpOnly: true,
+    sameSite: "strict",
   };
 
   return res
