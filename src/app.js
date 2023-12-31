@@ -10,7 +10,7 @@ app.use(
   cors({
     credentials: true,
     allowCredentials: true,
-    origin: "http://localhost:3000",
+    methods: ["POST", "GET"],
   })
 );
 app.use(express.json());
