@@ -6,9 +6,7 @@ import { uploadOnCloudinary } from "./utils/cloudinary.js";
 
 const app = express();
 
-app.use(
-  cors({ origin: true, credentials: true, origin: "http://localhost:3001" })
-);
+app.use(cors({ credentials: true, origin: "http://localhost:3001" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
