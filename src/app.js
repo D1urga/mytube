@@ -10,6 +10,7 @@ app.use(
     origin: "*",
     allowedHeaders: true,
     allowCredentials: true,
+    exposedHeaders: ["set-cookie"],
   })
 );
 
