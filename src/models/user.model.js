@@ -72,7 +72,7 @@ userSchema.methods.generateAccessToken = function () {
     },
     "accesstokensecret",
     {
-      expiresIn: "2m",
+      expiresIn: "3m",
     }
   );
 };
