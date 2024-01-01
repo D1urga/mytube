@@ -72,7 +72,7 @@ userSchema.methods.generateAccessToken = function () {
     },
     "accesstokensecret",
     {
-      expiresIn: "3m",
+      expiresIn: "50m",
     }
   );
 };
@@ -83,7 +83,7 @@ userSchema.methods.generateRefreshToken = function () {
     },
     "refreshtokensecret",
     {
-      expiresIn: "10m",
+      expiresIn: "55m",
     }
   );
 };

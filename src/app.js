@@ -10,7 +10,7 @@ app.use(
   cors({
     origin: "https://anoop-mytube.onrender.com",
     credentials: true,
-    optionsSuccessStatus: 200,
+    headers: ["Content-Type"],
   })
 );
 app.use(express.json());
