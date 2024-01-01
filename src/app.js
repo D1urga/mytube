@@ -10,9 +10,9 @@ app.use(
   cors({
     origin: "https://anoop-mytube.onrender.com",
     credentials: true,
-    headers: ["Content-Type"],
   })
 );
+app.options("*", cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
