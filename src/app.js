@@ -5,10 +5,10 @@ import { upload } from "./middlewares/multer.middleware.js";
 import { uploadOnCloudinary } from "./utils/cloudinary.js";
 
 const app = express();
-
+app.set("trust proxy", 1);
 app.use(
   cors({
-    origin: true,
+    origin: "https://anoop-mytube.onrender.com/",
     credentials: true,
   })
 );
