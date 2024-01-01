@@ -33,6 +33,12 @@ app.get("/testing", (req, res) => {
 
     .json({ data: "sent" });
 });
+// app.post("/setcookie", (req, res) => {
+//   res
+//     .cookie("cookieee", "cookieValue")
+//     .cookie("cookieee222222222", "cookieValue222222222")
+//     .json({ data: "working" });
+// });
 
 // app.get("/s", (req, res) => {
 //   res.cookie("bsaSession", "cookies 2222", { httpOnly: false });
