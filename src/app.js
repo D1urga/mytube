@@ -34,4 +34,11 @@ app.get("/testing", (req, res) => {
     .json({ data: "sent" });
 });
 
+// app.get("/s", (req, res) => {
+//   res.cookie("bsaSession", "cookies 2222", { httpOnly: false });
+//   res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+//   res.header("Access-Control-Allow-Credentials", "true");
+//   res.send("set");
+// });
+
 export { app };
