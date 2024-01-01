@@ -8,10 +8,8 @@ const app = express();
 
 app.use(
   cors({
-    origin: "*",
+    origin: true,
     credentials: true,
-    allowedHeaders: true,
-    allowCredentials: true,
   })
 );
 app.use(express.json());
