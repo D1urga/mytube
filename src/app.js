@@ -29,4 +29,11 @@ app.get("/sample", (req, res) => {
   res.json({ data: "working fine" });
 });
 
+app.get("/testing", (req, res) => {
+  res
+    .cookie("mycookie", "cookievalue")
+
+    .json({ data: "sent" });
+});
+
 export { app };
