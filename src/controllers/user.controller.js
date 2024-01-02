@@ -96,14 +96,13 @@ const loginUser = asyncHandler(async (req, res) => {
   const options = {
     httpOnly: false,
     secure: false,
-    max,
   };
 
   return res
     .status(200)
 
     .cookie("accessToken", accessToken, {
-      maxAge: second * 1000,
+      maxAge: second * 10000,
     })
     .cookie("refreshToken", refreshToken, options)
     .json(
