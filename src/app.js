@@ -5,7 +5,7 @@ import { upload } from "./middlewares/multer.middleware.js";
 import { uploadOnCloudinary } from "./utils/cloudinary.js";
 
 const app = express();
-app.set("trust proxy", 1);
+// app.set("trust proxy", 1);
 app.use(
   cors({
     origin: "http://localhost:3001",
