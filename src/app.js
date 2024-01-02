@@ -8,7 +8,7 @@ const app = express();
 app.set("trust proxy", 1);
 app.use(
   cors({
-    origin: true,
+    origin: "http://localhost:3001",
     credentials: true,
   })
 );
