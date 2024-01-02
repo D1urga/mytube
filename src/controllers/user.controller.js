@@ -103,7 +103,7 @@ const loginUser = asyncHandler(async (req, res) => {
     .status(200)
 
     .cookie("accessToken", accessToken, {
-      maxAge: 10000,
+      maxAge: second * 1000,
     })
     .cookie("refreshToken", refreshToken, options)
     .json(
