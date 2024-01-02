@@ -103,6 +103,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
     .cookie("accessToken", accessToken, {
       expires: new Date(Date.now() + 30 * 24 * 3600000),
+      httpOnly: true,
     })
     .cookie("refreshToken", refreshToken, options)
     .json(
