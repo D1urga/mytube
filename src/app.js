@@ -33,6 +33,11 @@ app.get("/testing", (req, res) => {
 
     .json({ data: "sent" });
 });
+
+app.get("/getcookie", async (req, res) => {
+  const data = await req.cookies;
+  res.json({ data: data });
+});
 // app.post("/setcookie", (req, res) => {
 //   res
 //     .cookie("cookieee", "cookieValue")
