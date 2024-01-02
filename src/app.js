@@ -8,7 +8,7 @@ const app = express();
 app.set("trust proxy", 1);
 app.use(
   cors({
-    origin: true,
+    origin: "https://anoop-mytube.onrender.com",
     credentials: true,
   })
 );
