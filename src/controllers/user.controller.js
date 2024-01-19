@@ -105,13 +105,15 @@ const loginUser = asyncHandler(async (req, res) => {
       expires: new Date(Date.now() + 30 * 24 * 3600000),
       httpOnly: true,
       secure: true,
-      sameSite: "none",
+      path: "/",
+      sameSite: "strict",
     })
     .cookie("refreshToken", refreshToken, {
       expires: new Date(Date.now() + 30 * 24 * 3600000),
       httpOnly: true,
       secure: true,
-      sameSite: "none",
+      path: "/",
+      sameSite: "strict",
     })
     .json(
       new ApiResponse(
