@@ -101,18 +101,26 @@ const loginUser = asyncHandler(async (req, res) => {
   return res
     .status(200)
 
-    .cookie("accessToken", accessToken, {
-      expires: new Date(Date.now() + 30 * 24 * 3600000),
-      httpOnly: true,
-      secure: true,
-      sameSite: "none",
-    })
-    .cookie("refreshToken", refreshToken, {
-      expires: new Date(Date.now() + 30 * 24 * 3600000),
-      httpOnly: true,
-      secure: true,
-      sameSite: "none",
-    })
+    .cookie(
+      "accessToken",
+      "accessToken"
+      // , {
+      //   expires: new Date(Date.now() + 30 * 24 * 3600000),
+      //   httpOnly: true,
+      //   secure: true,
+      //   sameSite: "none",
+      // }
+    )
+    .cookie(
+      "refreshToken",
+      "refreshToken"
+      // , {
+      //   expires: new Date(Date.now() + 30 * 24 * 3600000),
+      //   httpOnly: true,
+      //   secure: true,
+      //   sameSite: "none",
+      // }
+    )
     .json(
       new ApiResponse(
         200,
